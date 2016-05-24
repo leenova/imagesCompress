@@ -3,7 +3,7 @@
  */
 function getUrl(picfile,id){
     var cnv = document.getElementById("picCanvas");
-    var cntx = cnv.getContext('2d')//»ñµÃÈİÆ÷
+    var cntx = cnv.getContext('2d')//è·å¾—å®¹å™¨
     var pic = new Image();
     var agoimg = document.getElementById("origin");
 
@@ -16,11 +16,11 @@ function getUrl(picfile,id){
             pic.src = url;
             agoimg.src = url;
             agoimg.onload = function(e){
-                //µÈ±ÈËõ·Å,¸ßÎª²Î¿¼Öµ
+                //ç­‰æ¯”ç¼©æ”¾,é«˜ä¸ºå‚è€ƒå€¼
                var m = pic.width / pic.height;
-                cnv.height = 300;
-                cnv.width = 300 * m;
-                cntx.drawImage(agoimg,0,0,300*m,300);
+                cnv.height = 500;
+                cnv.width = 500 * m;
+                cntx.drawImage(agoimg,0,0,500*m,500);
             }
         }
     }
